@@ -10,6 +10,12 @@
 </head>
 
 <body>
+    <div class="container-switch">
+        <label class="toggle" for="switch">
+            <input type="checkbox" id="switch">
+            <span class="slider"></span>
+        </label>
+    </div>
     <!-- Inicio del header -->
     <header>
         <section class="container-logo-header">
@@ -27,14 +33,16 @@
     <!-- Fin del header -->
 
     <!-- Inicio del title main -->
-    <div class="container-main-title">
+    <div id="headerTitle" class="container-main-title">
         <section class="container-title">
             <h1>How can we help?</h1>
         </section>
         <article class="container-input-search">
-            <input type="text" placeholder="Search">
+            <input id="valor" name="search" type="text" placeholder="Search">
             <div class="container-button-input">
-                <i class="fa-solid fa-arrow-right"></i>
+                <button onclick="mostrarValores()" id="button-search">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
             </div>
         </article>
     </div>
@@ -196,8 +204,7 @@
             </article>
         </div>
     </footer>
-
-
+    <script src="app.js"></script>
 </body>
 
 </html>
