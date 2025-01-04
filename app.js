@@ -1,8 +1,7 @@
 function mostrarValores() {
-    const valorInput = document.getElementById('valor').value;
+    const valorInput = document.getElementById('input').value;
     console.log(valorInput)
 }
-
 
 // Obtenemos el valor del switch -->
 document.getElementById('switch').addEventListener('change', (e) => {
@@ -15,4 +14,4 @@ document.getElementById('switch').addEventListener('change', (e) => {
     headerTitle.style.transition = 'all 0.5s ease';
     bodyStyle.classList.toggle('dark-body');
     headerTitle.classList.toggle('dark-header-title');
-})
+});
