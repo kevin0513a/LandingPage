@@ -227,6 +227,7 @@ header {
 
 .button-card:hover{
     color: #09113b;
+    border-bottom: 1px solid #0938a4;
 }
 
 .button-card i {
