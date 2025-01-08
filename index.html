@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Landing Page</title>
-    <meta name="description" content="Landing Page sobre un panel de ayuda, realizado con HTML, CSS Y JS, se hizo con el fin de practicar distintos conceptos de diseño web.">
+    <meta name="description"
+        content="Landing Page sobre un panel de ayuda, realizado con HTML, CSS Y JS, se hizo con el fin de practicar distintos conceptos de diseño web.">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 
@@ -35,39 +36,36 @@
     </header>
     <!-- Fin del header -->
 
-
-
-
-
-
-
-    
-
-
     <!-- Inicio del title main -->
     <div id="headerTitle" class="container-main-title">
-        <section class="container-title">
-            <h1>How can we help?</h1>
-        </section>
-        <article class="container-input-search">
-            <input id="input" name="search" type="text" placeholder="Search">
-            <div class="container-button-input">
-                <button aria-label="Enviar formulario" onclick="mostrarValores()" id="button-search">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
+        <div class="main-title-question">
+            <section class="container-title">
+                <h1>How can we help?</h1>
+            </section>
+            <section class="container-text">
+                <i>Estimado usuario, por favor ingrese la cantidad de preguntas o solicitudes que desea realizar para
+                    proceder con su atención."</i>
+                <aside class="container-aside-check">
+                    <input min="0" max="4" type="number" id="input-number">
+                    <button id="button-validate" class="check-button">✔</button>
+                </aside>
+            </section>
+        </div>
+
+        <section class="container-results">
+            <div class="container-question-show" id="questions">
             </div>
-        </article>  
+            <article class="container-input-search">
+                <input id="input" name="search" type="text" placeholder="Search">
+                <div class="container-button-input">
+                    <button aria-label="Enviar formulario" id="button-search">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </article>
+        </section>
     </div>
     <!-- Fin del title main -->
-
-
-
-
-
-
-
-
-
 
     <!-- inicio del main -->
     <div class="container-main">
