@@ -11,7 +11,7 @@
 /* Estilos generales de la Landing Page --> */
 body {
     background-color: #f4f4fa;
-    
+
 }
 
 /* Final de estilos generales <-- */
@@ -87,15 +87,100 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    gap: 100px;
     width: 100%;
     height: 300px;
     background-color: #dadbf1;
 }
 
+
+.main-title-question {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .container-title h1 {
-    font-size: 70px;
+    font-size: 60px;
+}
+
+.container-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    padding: 10px;
+}
+
+.container-aside-check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+input[type="number"] {
+    width: 100px;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    border: 2px solid #4b5fd5;
+    border-radius: 5px;
+    outline: none;
+    background: linear-gradient(145deg, #4b5fd5, #6577f0);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="number"]:focus {
+    border-color: #3340b5;
+    box-shadow: 0 0 8px #4b5fd5;
+    background: linear-gradient(145deg, #6577f0, #4b5fd5);
+}
+
+input[type="number"]:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3), -5px -5px 10px rgba(255, 255, 255, 0.3);
+}
+
+.check-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(145deg, #4b5fd5, #6577f0);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.check-button:active {
+    transform: scale(0.9);
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.3), inset -3px -3px 6px rgba(255, 255, 255, 0.3);
+}
+
+.check-button:hover {
+    background: linear-gradient(145deg, #6577f0, #4b5fd5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3), -5px -5px 10px rgba(255, 255, 255, 0.3);
+}
+
+.container-results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .container-input-search {
@@ -103,7 +188,7 @@ header {
 }
 
 .container-input-search input {
-    width: 700px;
+    width: 550px;
     padding-left: 10px;
     padding-right: 100px;
     padding-top: 15px;
@@ -111,7 +196,7 @@ header {
     border-radius: 5px;
     border: 1px solid black;
     border: none;
-    border-bottom: 1px solid black;
+    border: 1px solid black;
 }
 
 .container-button-input {
@@ -143,6 +228,18 @@ header {
     transition: all ease 0.3s;
 }
 
+.container-question-show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    width: 550px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* Aqui finaliza los estilos del title main  <-*/
+
 .container-main {
     display: flex;
     justify-content: center;
@@ -151,10 +248,8 @@ header {
 
 .main {
     display: grid;
-    grid-template-columns: repeat(
-        auto-fill,
-        minmax(380px, 1fr)
-    );
+    grid-template-columns: repeat(auto-fill,
+            minmax(380px, 1fr));
     grid-auto-rows: minmax(200px, auto);
     gap: 50px;
     margin-top: 100px;
@@ -173,11 +268,13 @@ header {
     flex-direction: column;
     position: relative;
     width: 100%;
-    transition: transform 0.3s ease-in-out; /* Suaviza el efecto de zoom */
+    transition: transform 0.3s ease-in-out;
+    /* Suaviza el efecto de zoom */
 }
 
-.container-card:hover{
-    transform: scale(1.1); /* Aplica el zoom */
+.container-card:hover {
+    transform: scale(1.1);
+    /* Aplica el zoom */
 }
 
 .container-image-card {
@@ -216,6 +313,7 @@ header {
     height: 20%;
     margin-bottom: 20px;
 }
+
 .button-card {
     background-color: transparent;
     color: #6f7082;
@@ -225,7 +323,7 @@ header {
     transition: all ease-in-out .5s;
 }
 
-.button-card:hover{
+.button-card:hover {
     color: #09113b;
     border-bottom: 1px solid #0938a4;
 }
@@ -301,31 +399,31 @@ li:first-child {
 /* Fin de estilos Footer --> */
 
 /* Estilos del modo oscuro --> */
-.container-switch{
+.container-switch {
     position: absolute;
     right: 0;
     margin-top: 100px;
     margin-right: 50px;
 }
 
-.dark-body{
+.dark-body {
     background-color: rgb(29, 33, 40);
     color: white;
     transition: all ease-in-out 1.1s;
 }
 
-.dark-header-title{
+.dark-header-title {
     background-color: rgb(47, 52, 67);
     color: white;
     transition: all ease-in-out 1.1s;
 }
 
-.dark-button{
+.dark-button {
     color: white;
     transition: all ease-in-out .5s;
 }
 
-.dark-button:hover{
+.dark-button:hover {
     color: white;
     border-bottom: 1px solid white;
 }
@@ -338,13 +436,13 @@ li:first-child {
     display: inline-block;
     width: 60px;
     height: 25px;
-  }
-  
-  .toggle input {
+}
+
+.toggle input {
     display: none;
-  }
-  
-  .slider {
+}
+
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -354,7 +452,7 @@ li:first-child {
     background-color: #333;
     transition: 0.4s;
     border-radius: 25px;
-  }
+}
 
 .slider:before {
     position: absolute;
@@ -372,18 +470,18 @@ li:first-child {
     font-size: 12px;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     transform: translateX(35px);
     content: "🌙";
     background-color: #000;
 }
-  
-  input:checked + .slider {
-    background-color: rgb(216, 216, 216);
-  }
-  
-  input:checked + .slider:before {
-    transform: translateX(35px);
-  }
 
-    /* Final de estilos del toogle dark mode <-- */
+input:checked+.slider {
+    background-color: rgb(216, 216, 216);
+}
+
+input:checked+.slider:before {
+    transform: translateX(35px);
+}
+
+/* Final de estilos del toogle dark mode <-- */
