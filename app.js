@@ -26,9 +26,6 @@ document.getElementById('button-validate').addEventListener('click', () => {
         questions.appendChild(show);
     }, 4000);
 
-    const lineBreak = document.createElement('br');
-    questions.appendChild(lineBreak);
-
     // Habilitar input y botón
     inputField.disabled = false;
     searchButton.disabled = false;
