@@ -53,12 +53,16 @@
         </div>
 
         <section class="container-results">
-            <div class="container-question-show" id="questions">
+
+            <div class="container-question-show">
+                <div class="question-show" id="questions">
+                </div>
             </div>
+
             <article class="container-input-search">
-                <input id="input" name="search" type="text" placeholder="Search">
+                <input autocomplete="off" id="input" name="search" type="text" placeholder="Search" disabled>
                 <div class="container-button-input">
-                    <button aria-label="Enviar formulario" id="button-search">
+                    <button aria-label="Enviar formulario" id="button-search" disabled>
                         <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
