@@ -238,6 +238,12 @@ input[type="number"]:hover {
     border-radius: 10px;
 }
 
+.question-show{
+    background-color: #0938a4;
+    width: 80%;
+    height: 100%;
+}
+
 /* Aqui finaliza los estilos del title main  <-*/
 
 .container-main {
@@ -485,3 +491,9 @@ input:checked+.slider:before {
 }
 
 /* Final de estilos del toogle dark mode <-- */
+
+.show-message{
+    margin-top: 20px;
+    color: gray;
+    text-align: center;
+}
