@@ -43,7 +43,7 @@ document.getElementById('button-validate').addEventListener('click', () => {
                 enteredQuestions++;
 
                 // Agregar la pregunta al cuadro de questions con enumeración
-                const questionElement = document.createElement('p');
+                const questionElement = document.createElement('i');
                 questionElement.textContent = `Pregunta ${enteredQuestions}: ${question}`;
                 questions.appendChild(questionElement);
 
