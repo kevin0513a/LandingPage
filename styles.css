@@ -67,6 +67,7 @@ header {
     border: 1px solid white;
     background-color: transparent;
     color: white;
+    transition: all ease-in-out .3s;
 }
 
 .container-buttons-header button:last-child {
@@ -78,9 +79,23 @@ header {
     background-color: #4b5fd5;
     color: white;
     border: none;
+    transition: all ease-in-out .3s;
+}
+
+.container-buttons-header button:first-child:hover {
+    background-color: #4b5fd5;
+    color: white;
+    border: none;
+}
+
+.container-buttons-header button:last-child:hover {
+    background-color: #3a4fbc;
+    color: white;
+    border: none;
 }
 
 /* Final de estilos del header <-- */
+
 
 /* Estilos del título Principal --> */
 .container-main-title {
@@ -93,7 +108,6 @@ header {
     height: 300px;
     background-color: #dadbf1;
 }
-
 
 .main-title-question {
     display: flex;
@@ -116,7 +130,7 @@ header {
     padding: 10px;
 }
 
-.container-aside-check{
+.container-aside-check {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,19 +143,19 @@ input[type="number"] {
     padding: 10px;
     font-size: 14px;
     color: #fff;
-    border: 2px solid #4b5fd5;
+    border: 2px solid #ffffff;
     border-radius: 5px;
     outline: none;
-    background: linear-gradient(145deg, #4b5fd5, #6577f0);
+    background-color: #4429f6;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease-in-out;
 }
 
 input[type="number"]:focus {
-    border-color: #3340b5;
-    box-shadow: 0 0 8px #4b5fd5;
-    background: linear-gradient(145deg, #6577f0, #4b5fd5);
+    border-color: #eee3ff;
+    box-shadow: 0 0 8px #050e3f;
+    background-color: #2200ff;
 }
 
 input[type="number"]:hover {
@@ -154,7 +168,7 @@ input[type="number"]:hover {
     align-items: center;
     width: 40px;
     height: 40px;
-    background: linear-gradient(145deg, #4b5fd5, #6577f0);
+    background-color: #4429f6;
     border: none;
     border-radius: 50%;
     color: #fff;
@@ -171,7 +185,7 @@ input[type="number"]:hover {
 }
 
 .check-button:hover {
-    background: linear-gradient(145deg, #6577f0, #4b5fd5);
+    background-color: #2200ff;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3), -5px -5px 10px rgba(255, 255, 255, 0.3);
 }
 
@@ -181,6 +195,24 @@ input[type="number"]:hover {
     justify-content: center;
     flex-direction: column;
     gap: 10px;
+}
+
+.container-question-show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    width: 550px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.question-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
 }
 
 .container-input-search {
@@ -217,6 +249,8 @@ input[type="number"]:hover {
 #button-search:hover {
     background-color: #4b5fd5;
     color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 #button-search {
@@ -228,26 +262,9 @@ input[type="number"]:hover {
     transition: all ease 0.3s;
 }
 
-.container-question-show {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #FFF;
-    width: 550px;
-    height: 200px;
-    border-radius: 10px;
-}
-
-.question-show{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 80%;
-    height: 100%;
-}
-
 /* Aqui finaliza los estilos del title main  <-*/
 
+/* Estilos de la sección principal --> */
 .container-main {
     display: flex;
     justify-content: center;
@@ -266,18 +283,13 @@ input[type="number"]:hover {
     justify-content: space-between;
 }
 
-.main article {
-    box-shadow: inset -36px -36px 23px -36px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-
 .container-card {
     display: flex;
     flex-direction: column;
     position: relative;
     width: 100%;
     transition: transform 0.3s ease-in-out;
-    /* Suaviza el efecto de zoom */
+    box-shadow: inset -36px -36px 23px -36px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .container-card:hover {
@@ -324,25 +336,30 @@ input[type="number"]:hover {
 
 .button-card {
     background-color: transparent;
-    color: #6f7082;
+    color: gray;
     border: none;
     cursor: pointer;
     margin-left: 120px;
-    transition: all ease-in-out .5s;
+    transition: all ease-in-out .2s;
 }
 
 .button-card:hover {
-    color: #09113b;
-    border-bottom: 1px solid #0938a4;
+    color: #000;
+    border-bottom: 1px solid black;
 }
 
 .button-card i {
-    color: #6f7082;
+    color: gray;
+    font-size: 10px;
 }
 
+.button-card i:hover {
+    color: #000;
+}
 /* Fin Estilos del título Principal --> */
 
 
+/* Estilos Footer --> */
 footer {
     background-color: #000;
     height: 350px;
@@ -494,7 +511,8 @@ input:checked+.slider:before {
 
 /* Final de estilos del toogle dark mode <-- */
 
-.show-message{
+/* Estilos de la sección de mensajes en Js --> */
+.show-message {
     margin-top: 10px;
     margin-bottom: 10px;
     color: gray;
