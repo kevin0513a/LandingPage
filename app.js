@@ -17,46 +17,54 @@ document.getElementById('button-validate').addEventListener('click', () => {
     questions.innerHTML = `<i class="show-message">Ingrese sus ${inputNumber} preguntas o peticiones en el cuadro de texto en la parte inferior.</i>`;
     setTimeout(() => {
         questions.innerHTML = '';
-    }, 3000)
+    }, 2000)
 
     setTimeout(() => {
         const show = document.createElement('i');
         show.classList = 'show-message';
         show.textContent = `Sus preguntas o peticiones se mostrarán aquí:`;
         questions.appendChild(show);
-    }, 4000);
+    }, 2000);
 
     // Habilitar input y botón
     inputField.disabled = false;
     searchButton.disabled = false;
 
-    let enteredQuestions = 0;
-
-    // Escuchar evento "Enter" en el campo de entrada
     inputField.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
-            const question = inputField.value.trim();
-            if (question) {
-                enteredQuestions++;
-
-                // Agregar la pregunta al cuadro de questions con enumeración
-                const questionElement = document.createElement('i');
-                questionElement.textContent = `Pregunta ${enteredQuestions}: ${question}`;
-                questions.appendChild(questionElement);
-
-                inputField.value = ''; // Limpiar el campo de entrada
-
-                // Deshabilitar input si se alcanza el número máximo de preguntas
-                if (enteredQuestions >= inputNumber) {
-                    inputField.disabled = true;
-                    searchButton.disabled = true;
-                    inputField.value = `Haz ingresado ${inputNumber} preguntas. ¡Gracias!`;
-                }
-            }
+            handleQuestions();
         }
     });
-});
 
+    searchButton.addEventListener('click', () => {
+        handleQuestions();
+    });
+
+    let enteredQuestions = 0;
+
+    function handleQuestions() {
+        const question = inputField.value.trim();
+        if (question) {
+            enteredQuestions++;
+
+            // Agregar la pregunta al box de questions -->
+            const questionElement = document.createElement('i');
+            questionElement.style.color = 'black'
+            questionElement.textContent = `Pregunta ${enteredQuestions}: ${question}`;
+            questions.appendChild(questionElement);
+
+            inputField.value = ''; // Limpiar el campo de entrada <--
+
+            // Deshabilitar input si se alcanza el número máximo de preguntas -->
+            if (enteredQuestions >= inputNumber) {
+                inputField.disabled = true;
+                searchButton.disabled = true;
+                inputField.value = `Haz ingresado ${inputNumber} preguntas. ¡Gracias!`;
+                inputField.style.color = 'gray';
+            }
+        }
+    };
+});
 
 // Obtenemos el valor del switch -->
 document.getElementById('switch').addEventListener('change', (e) => {
