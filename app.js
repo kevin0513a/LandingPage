@@ -70,7 +70,9 @@ document.getElementById('button-validate').addEventListener('click', () => {
 document.getElementById('switch').addEventListener('change', (e) => {
     if (e.target.checked) {
         console.log('El switch está activado');
-    } else console.log('El switch está desactivado');
+    } else {
+        console.log('El switch está desactivado');
+    }
     const bodyStyle = document.querySelector('body');
     const headerTitle = document.getElementById('headerTitle');
     bodyStyle.style.transition = 'all 0.5s ease';
@@ -81,5 +83,11 @@ document.getElementById('switch').addEventListener('change', (e) => {
     document.querySelectorAll('.button-card').forEach(el => {
         el.classList.toggle('dark-button');
     });
+
+    // Añadimos la lógica para container-card
+    document.querySelectorAll('.container-card').forEach(el => {
+        el.classList.toggle('dark-container-card');
+    });
 });
+
 
