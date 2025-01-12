@@ -306,19 +306,17 @@ input[type="number"]:hover {
     justify-content: center;
     width: 100%;
     padding: 20px;
-    /* Espaciado interno para mejor apariencia en pantallas pequeñas */
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
 }
 
 .main {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    /* Más adaptable a pantallas pequeñas */
-    gap: 50px;
-    /* Reduce el espacio entre tarjetas en pantallas pequeñas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 cards por fila, ajustable */
+    gap: 30px; /* Ajusta el espacio entre las cards */
     margin: 50px auto;
-    /* Centra el grid verticalmente */
-    width: clamp(90%, 60%, 1200px);
-    /* Limita el ancho para mantenerlo responsive */
+    width: 100%; /* Asegura que el grid ocupe el 100% del contenedor */
+    max-width: 1200px; /* Limita el ancho máximo */
+    padding: 0 20px; /* Agrega algo de padding lateral */
 }
 
 .container-card {
@@ -331,6 +329,8 @@ input[type="number"]:hover {
     padding: 20px;
     border-radius: 10px;
     background-color: white;
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+    margin: 0 auto; /* Centra las cards dentro de su contenedor */
 }
 
 .container-card:hover {
@@ -611,5 +611,11 @@ input:checked+.slider:before {
     header {
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Reduce el tamaño de las cards en pantallas pequeñas */
     }
 }
